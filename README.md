@@ -188,3 +188,6 @@ The reference implementation, if you have it next door, has a broken login in
 `routes/auth.js` instead, so sign-in works from the start. Fix the reference before using it
 as a behaviour reference for authentication.
 
+## Version control
+The repository's `.gitignore` lists `node_modules/`, so anyone who updates the project with
+`git clone` and `git push` will not upload the `node_modules/` folder installed on their own machine.
