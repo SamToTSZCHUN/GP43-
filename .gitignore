@@ -12,8 +12,9 @@ node_modules/
 .npm/
 
 # --- Logs and debug output ------------------------------------------------
-# The application's audit trail is data/logs.json on purpose; that file stays
-# tracked. These patterns only catch tool output (npm, nodemon, test runs).
+# The application's audit trail is cainiao-lms/data/logs.json; it changes on
+# every sign-in, so it is kept local (see the project data section below).
+# These patterns only catch tool output (npm, nodemon, test runs).
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -49,6 +50,9 @@ coverage/
 # --- Project data that stays tracked -------------------------------------
 # data/*.json is the seed and demo state (3 users, 5 shelves, 10 parcels).
 # It must be committed so every team member starts from the same records.
+# The one exception is the audit trail: it grows on every action, so it is
+# local runtime state instead of shared demo data.
+cainiao-lms/data/logs.json
 # snapshots/ is the manual pre-Git undo. Git history replaces it, so the dated
 # backup folders are ignored wherever they sit (the project keeps them in
 # cainiao-lms/snapshots/); the folder's README.md stays tracked.
